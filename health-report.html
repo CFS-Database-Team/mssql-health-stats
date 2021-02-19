@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>#report{font-family: Verdana, Geneva, sans-serif;font-size: 12px;border-collapse: collapse;width: 90%}#report td, #report th{border: 1px solid #ddd;padding: 4px}#report th{padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #5E81AC;color: white}.warning{color: red;font-weight: bold}p{font-family: Verdana, Geneva, sans-serif;font-size: 13px}h3{font-family: Verdana, Geneva, sans-serif}footer{text-align: center;padding: 3px}</style>
+	</head>
+	<body>
+		<h3>MSSQL Server Version</h3>
+		<table id="report">
+			<tr>
+				<th>Host Name</th>
+				<th>SQL Server Version</th>
+				<th>SQL Server Edition</th>
+				<th>Service Pack</th>
+				<th>Collation</th>
+				<th>Failover Clustered Instance</th>
+				<th>Single User Mode</th>
+			</tr>
+			<tr>
+				<td>(local)</td>
+				<td>Microsoft SQL Server 2017 (RTM-CU22) (KB4577467) - 14.0.3356.20 (X64)   Aug 20 2020 22:33:27   Copyright (C) 2017 Microsoft Corporation  Developer Edition (64-bit) on Windows 10 Pro 10.0 
+					<X64> (Build 17134: ) 
+					</td>
+					<td>Developer Edition (64-bit)</td>
+					<td>RTM</td>
+					<td>Modern_Spanish_CI_AS</td>
+					<td>Non Clustered Instance</td>
+					<td>Multi User</td>
+				</tr>
+			</table>
+			<h3>MSSQL Server Instance</h3>
+			<table id="report">
+				<tr>
+					<th>Start Time</th>
+					<th>Up Time (Days)</th>
+				</tr>
+				<tr>
+					<td>2021-02-07 08:24 PM</td>
+					<td>12</td>
+				</tr>
+			</table>
+			<h3>Disk Stats </h3>
+			<table id="report">
+				<tr>
+					<th>Drive Letter</th>
+					<th>Label</th>
+					<th>Total Space (MB)</th>
+					<th>Used Space (MB)</th>
+					<th>Free Space (MB)</th>
+					<th>Percentage Free (%)</th>
+				</tr>
+				<tr>
+					<td>C</td>
+					<td>OS</td>
+					<td>952,591.00</td>
+					<td>217,894.00</td>
+					<td>734,697.00</td>
+					<td>77.13</td>
+				</tr>
+				<tr class="warning">
+					<td>E</td>
+					<td>DATA</td>
+					<td>1,024.00</td>
+					<td>900.00</td>
+					<td>124.00</td>
+					<td>12.10</td>
+				</tr>
+			</table>
+			<h3>Database</h3>
+			<table id="report">
+				<tr>
+					<th>Name</th>
+					<th>Compatibility Level</th>
+					<th>Recovery Model</th>
+					<th>Data Files</th>
+					<th>Data Files Size (MB)</th>
+					<th>Log Files</th>
+					<th>Log Files (MB)</th>
+					<th>Database Size (MB)</th>
+				</tr>
+				<tr>
+					<td>master</td>
+					<td>SQL Server 2017 (140)</td>
+					<td>SIMPLE</td>
+					<td>1</td>
+					<td>5.38</td>
+					<td>1</td>
+					<td>2.00</td>
+					<td>7.38</td>
+				</tr>
+				<tr>
+					<td>tempdb</td>
+					<td>SQL Server 2017 (140)</td>
+					<td>SIMPLE</td>
+					<td>8</td>
+					<td>64.00</td>
+					<td>1</td>
+					<td>8.00</td>
+					<td>72.00</td>
+				</tr>
+				<tr>
+					<td>model</td>
+					<td>SQL Server 2017 (140)</td>
+					<td>FULL</td>
+					<td>1</td>
+					<td>8.00</td>
+					<td>1</td>
+					<td>8.00</td>
+					<td>16.00</td>
+				</tr>
+				<tr>
+					<td>msdb</td>
+					<td>SQL Server 2017 (140)</td>
+					<td>SIMPLE</td>
+					<td>1</td>
+					<td>19.63</td>
+					<td>1</td>
+					<td>28.81</td>
+					<td>48.44</td>
+				</tr>
+				<tr>
+					<td>RedGate</td>
+					<td>SQL Server 2017 (140)</td>
+					<td>SIMPLE</td>
+					<td>1</td>
+					<td>72.00</td>
+					<td>1</td>
+					<td>72.00</td>
+					<td>144.00</td>
+				</tr>
+				<tr>
+					<td>AzureDevOps_Configuration</td>
+					<td>SQL Server 2016 (130)</td>
+					<td>FULL</td>
+					<td>1</td>
+					<td>1,032.00</td>
+					<td>1</td>
+					<td>392.00</td>
+					<td>1,424.00</td>
+				</tr>
+				<tr>
+					<td>AdventureWorks2017</td>
+					<td>SQL Server 2017 (140)</td>
+					<td>SIMPLE</td>
+					<td>1</td>
+					<td>264.00</td>
+					<td>1</td>
+					<td>72.00</td>
+					<td>336.00</td>
+				</tr>
+				<tr>
+					<td>AdventureWorksDW2017</td>
+					<td>SQL Server 2017 (140)</td>
+					<td>SIMPLE</td>
+					<td>1</td>
+					<td>136.00</td>
+					<td>1</td>
+					<td>72.00</td>
+					<td>208.00</td>
+				</tr>
+				<tr>
+					<td>AdventureWorksLT2017</td>
+					<td>SQL Server 2012 (110)</td>
+					<td>SIMPLE</td>
+					<td>1</td>
+					<td>21.94</td>
+					<td>1</td>
+					<td>2.00</td>
+					<td>23.94</td>
+				</tr>
+				<tr>
+					<td>SSISDB</td>
+					<td>SQL Server 2017 (140)</td>
+					<td>FULL</td>
+					<td>1</td>
+					<td>40.00</td>
+					<td>1</td>
+					<td>74.94</td>
+					<td>114.94</td>
+				</tr>
+				<tr>
+					<td>MSSQLServerMonitor</td>
+					<td>SQL Server 2016 (130)</td>
+					<td>FULL</td>
+					<td>1</td>
+					<td>8.00</td>
+					<td>1</td>
+					<td>72.00</td>
+					<td>80.00</td>
+				</tr>
+				<tr>
+					<td>CFSDB</td>
+					<td>SQL Server 2016 (130)</td>
+					<td>FULL</td>
+					<td>1</td>
+					<td>8.00</td>
+					<td>1</td>
+					<td>72.00</td>
+					<td>80.00</td>
+				</tr>
+			</table>
+			<h3>Database Backup</h3>
+			<table id="report">
+				<tr>
+					<th>Name</th>
+					<th>Last Full Backup</th>
+					<th>Elapsed Time Last Backup</th>
+					<th>Duration</th>
+					<th>Backup Size (MB)</th>
+				</tr>
+				<tr>
+					<td>master</td>
+					<td>Never</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>model</td>
+					<td>Never</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>msdb</td>
+					<td>Never</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>RedGate</td>
+					<td>Never</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>AzureDevOps_Configuration</td>
+					<td>Never</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>AdventureWorks2017</td>
+					<td>Never</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>AdventureWorksDW2017</td>
+					<td>Never</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>AdventureWorksLT2017</td>
+					<td>Never</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>SSISDB</td>
+					<td>Never</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>MSSQLServerMonitor</td>
+					<td>Never</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>CFSDB</td>
+					<td>2021-02-19 03:20 PM</td>
+					<td>0 hours ago</td>
+					<td>0 seconds</td>
+					<td>3.52</td>
+				</tr>
+			</table>
+			<br>
+				<p>**Exclude tempdb </p>
+				<br>
+					<footer>
+						<p>Autor: Hidequel Puga</p>
+						<p>
+							<a href="mailto:codefivestar@gmail.com">codefivestar@gmail.com</a>
+						</p>
+					</p>
+				</footer>
+			</body>
+		</html>
