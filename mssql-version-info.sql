@@ -5,7 +5,7 @@
 --Descripción    : Muestra información de la versión de MSSQL Server
 ----------------------------------------------------------------------------------------------------------
 
-SELECT CONVERT(VARCHAR(50), @@SERVERNAME)                   AS ServerName
+SELECT CONVERT(VARCHAR(50), SERVERPROPERTY('ServerName'))   AS ServerName
 	 , CONVERT(VARCHAR(500), @@VERSION)                     AS Version
 	 , CONVERT(VARCHAR(50), SERVERPROPERTY('edition'))      AS Edition
 	 , CONVERT(VARCHAR(50), SERVERPROPERTY('productlevel')) AS ProductLevel 
