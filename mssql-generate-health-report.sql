@@ -31,7 +31,7 @@ DECLARE @subject       AS NVARCHAR(255)
 	  , @health_report AS NVARCHAR(MAX);
 	
 	SET @body_format  = 'HTML';
-	SET @subject      = 'Health Report for ' + CONVERT(VARCHAR(50), @@SERVERNAME);
+	SET @subject      = 'Health Report for ' + CONVERT(VARCHAR(50), SERVERPROPERTY('ServerName'));
 	SET @header       = N'<!DOCTYPE html><html><head><style>#report{font-family: Verdana, Geneva, sans-serif;font-size: 12px;border-collapse: collapse;width: 90%}#report td, #report th{border: 1px solid #ddd;padding: 4px}#report th{padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #5E81AC;color: white}.warning{color: red;font-weight: bold}p{font-family: Verdana, Geneva, sans-serif;font-size: 13px}h3{font-family: Verdana, Geneva, sans-serif}footer{text-align: center;padding: 3px}</style></head><body>';
     SET @footer       = N'<br><footer><p>Autor: Hidequel Puga</p><p><a href="mailto:codefivestar@gmail.com">codefivestar@gmail.com</a></p></p></footer></body></html>';
 	
@@ -54,7 +54,7 @@ DECLARE @subject       AS NVARCHAR(255)
 	);
 
 	INSERT INTO #Temp_ServerInformation(servername, [version], edition, servicepack, collation, is_clustered_instance, is_instance_in_single_user_mode)
-		 SELECT CONVERT(VARCHAR(50), @@SERVERNAME)
+		 SELECT CONVERT(VARCHAR(50), SERVERPROPERTY('ServerName'))
 			  , CONVERT(VARCHAR(500), @@VERSION)
 			  , CONVERT(VARCHAR(50), SERVERPROPERTY('edition'))
 			  , CONVERT(VARCHAR(50), SERVERPROPERTY('productlevel'))  
