@@ -4,7 +4,24 @@
 		<style>#report{font-family: Verdana, Geneva, sans-serif;font-size: 12px;border-collapse: collapse;width: 90%}#report td, #report th{border: 1px solid #ddd;padding: 4px}#report th{padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #5E81AC;color: white}.warning{color: red;font-weight: bold}p{font-family: Verdana, Geneva, sans-serif;font-size: 13px}h3{font-family: Verdana, Geneva, sans-serif}footer{text-align: center;padding: 3px}</style>
 	</head>
 	<body>
-		<iframe src="https://github.com/CFS-Database-Team/mssql-health-stats/blob/main/mssql-database-info.sql" height="200" width="300" title="Iframe Example"></iframe>
+		<p>Snippet: 
+		<code>
+			SELECT CONVERT(VARCHAR(50), SERVERPROPERTY('ServerName'))   AS ServerName
+			, CONVERT(VARCHAR(500), @@VERSION)                     AS Version
+			, CONVERT(VARCHAR(50), SERVERPROPERTY('edition'))      AS Edition
+			, CONVERT(VARCHAR(50), SERVERPROPERTY('productlevel')) AS ProductLevel 
+			, CONVERT(VARCHAR(50), SERVERPROPERTY('collation'))    AS Collation
+			, CASE SERVERPROPERTY('IsClustered')                   
+				 WHEN 1 THEN 'Clustered Instance'
+				 WHEN 0 THEN 'Non Clustered Instance'
+				 ELSE ''
+			   END                                                 AS IsClusteredInstance        
+			, CASE SERVERPROPERTY('IsSingleUser')
+				 WHEN 1 THEN 'Single User'
+				 WHEN 0 THEN 'Multi User'
+				 ELSE ''
+			   END                                                 AS IsInstanceInSingleUserMode;	
+		</code></p>
 		<h3>MSSQL Server Version</h3>
 		<table id="report">
 			<tr>
