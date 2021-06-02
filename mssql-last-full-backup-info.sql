@@ -4,7 +4,8 @@
 --Fecha          : 2021-02-19
 --Descripción    : Muestra información del ultimo backup completo de las base de datos
 ----------------------------------------------------------------------------------------------------------
-
+SELECT *
+  FROM (
 		  SELECT db.database_id AS database_id
 		       , db.[name]      AS [database_name]
 			   ,  CASE bs.[type]
@@ -32,5 +33,9 @@
 			   ,  bs.[type]
 			   , bs.compressed_backup_size
 			   , bs.backup_start_date, bs.backup_finish_date
+		) AS T1
+WHERE T1.rownum = 1
+ORDER BY T1.database_id
+
 		  --HAVING MAX(bs.backup_finish_date) <= DATEADD(dd, -7, GETDATE()) 
 		  --    OR MAX(bs.backup_finish_date) IS NULL
